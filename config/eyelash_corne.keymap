@@ -54,7 +54,7 @@
         compatible = "zmk,keymap";
 
         default_layer {
-            display-name = "QWERTY";
+            display-name = "COLEMAK";
             bindings = <
 &kp TAB    &kp Q  &kp W  &kp F     &kp P        &kp G                                         &kp UP                &kp J                  &kp L        &kp U                                   &kp O    &kp SEMICOLON  &mt BACKSPACE MINUS
 &td0       &kp A  &kp R  &kp S     &kp T        &kp D                               &kp LEFT  &kp ENTER  &kp RIGHT  &kp H                  &kp N        &kp E                                   &kp I    &kp O          &kp SQT
@@ -66,7 +66,7 @@
         };
 
         lower_layer {
-            display-name = "NUMBER";
+            display-name = "SYMBOL";
             bindings = <
 &kp GRAVE  &kp EXCLAMATION  &kp LESS_THAN     &kp GREATER_THAN   &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS                                &mmv MOVE_UP                     &kp AT_SIGN      &kp LS(AMPERSAND)  &kp ASTERISK    &kp PERCENT  &kp PIPE              &kp MINUS
 &trans     &bt BT_CLR_ALL   &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp LEFT_BRACE        &kp RIGHT_BRACE                      &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp LEFT         &kp EQUAL          &kp PLUS        &kp HOME     &kp END               &kp PG_UP
@@ -78,12 +78,12 @@
         };
 
         raise_layer {
-            display-name = "SYMBOL";
+            display-name = "MVMENT";
             bindings = <
-&trans  &trans  &kp AT        &kp HASH   &kp DLLR   &kp PRCNT                            &mmv MOVE_UP                     &kp CARET  &kp AMPS   &kp ASTRK  &kp LPAR  &kp RPAR  &kp BSPC
-&trans  &trans  &mkp LCLK     &mkp MCLK  &mkp RCLK  &mkp MB4             &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp MINUS  &kp EQUAL  &kp LBKT   &kp RBKT  &kp BSLH  &kp GRAVE
-&trans  &trans  &out OUT_BLE  &none      &none      &mkp MB5   &trans                    &mmv MOVE_DOWN                   &kp UNDER  &kp PLUS   &kp LBRC   &kp RBRC  &kp PIPE  &kp TILDE
-                              &trans     &trans     &kp SPACE                                                             &kp RET    &trans     &trans
+&trans  &trans  &mkp LCLK       &mmv MOVE_UP    &mkp RCLK        &msc SCRL_UP                              &mmv MOVE_UP                     &kp PG_UP  &kp DOWN  &kp ASTRK  &kp LPAR  &kp RPAR   &out OUT_TOG
+&trans  &trans  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &msc SCRL_DOWN            &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp PG_DN  &kp LEFT  &kp DOWN   &kp UP    &kp RIGHT  &bt BT_CLR_ALL
+&trans  &trans  &msc SCRL_LEFT  &trans          &msc SCRL_RIGHT  &trans          &trans                    &mmv MOVE_DOWN                   &kp UNDER  &kp PLUS  &kp LBRC   &kp RBRC  &kp PIPE   &kp TILDE
+                                &trans          &trans           &kp SPACE                                                                  &kp RET    &trans    &trans
             >;
 
             sensor-bindings = <&scroll_encoder>;
