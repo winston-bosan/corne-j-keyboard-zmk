@@ -11,7 +11,7 @@ layers:
   - J
   - L
   - U
-  - O
+  - Y
   - {t: ;, s: ':'}
   - {t: '-', h: '$$mdi:backspace$$', s: _}
   - $$mdi:apple-keyboard-shift$$
@@ -136,8 +136,8 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:menu-down$$', s: '$$mdi:mouse$$'}
   - _
-  - +
-  - '{'
+  - Sft+Ctl+$$mdi:keyboard-tab$$
+  - Ctl+$$mdi:keyboard-tab$$
   - '}'
   - '|'
   - '~'
@@ -160,7 +160,7 @@ layers:
   - F8
   - F9
   - F12
-  - F11
+  - PRINTSCREEN
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '4', s: $}
